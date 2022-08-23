@@ -1,6 +1,6 @@
 # RockPaperScissors-Project
 
-##### This is my very first javascript project with 0 prior experience. 
+##### This is my very first javascript project with almost no prior experience. 
 
 #### Key Takeaway:
 * Gained a better understanding of javascript functions.
