@@ -12,60 +12,65 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    
+    let roundWinner='';
 
-    if (playerSelection === 'rock'.toUpperCase() && computerSelection === 'Rock') {
-        return "It`s a tie"
-    }else if (playerSelection === 'rock'.toUpperCase() && computerSelection === 'Paper') {
-         return "You lose! Paper beats Rock"
-    } else if (playerSelection === 'rock'.toUpperCase() && computerSelection === 'Scissors'){
-        return "You win! Rock beats Paper"
-    } else if (playerSelection === 'paper'.toUpperCase() && computerSelection === 'Rock') {
-        return "You win! Paper beats Rock"
-    } else if (playerSelection === 'paper'.toUpperCase() && computerSelection === 'Paper') {
-        return "It`s a tie"
-    } else if (playerSelection === 'paper'.toUpperCase() && computerSelection === 'Scissors') {
-        return "You lose! Scissors beats Paper"
-    } else if (playerSelection === 'scissors'.toUpperCase() && computerSelection === 'Rock') {
-        return "You lose! Rock beats Scissors"
-    } else if (playerSelection === 'scissors'.toUpperCase() && computerSelection === 'Paper') {
-        return "You win! Scissors beats Paper"
-    } else if (playerSelection === 'scissors'.toUpperCase() && computerSelection === 'Scissors') {
-        return "It`s a tie"
-     } else {
-        return 'Something`s wrong'
-    }
+    if (playerSelection == 'rock'.toUpperCase() && computerSelection == 'Rock') {
+        roundWinner = "It`s a tie"
+    }else if (playerSelection == 'rock'.toUpperCase() && computerSelection == 'Paper') {
+         rroundWinner = "You lose! Paper beats Rock"
+    } else if (playerSelection == 'rock'.toUpperCase() && computerSelection == 'Scissors'){
+        roundWinner = "You win! Rock beats Paper"
+    } else if (playerSelection == 'paper'.toUpperCase() && computerSelection == 'Rock') {
+        roundWinner = "You win! Paper beats Rock"
+    } else if (playerSelection == 'paper'.toUpperCase() && computerSelection == 'Paper') {
+        roundWinner = "It`s a tie"
+    } else if (playerSelection == 'paper'.toUpperCase() && computerSelection == 'Scissors') {
+        roundWinner = "You lose! Scissors beats Paper"
+    } else if (playerSelection == 'scissors'.toUpperCase() && computerSelection == 'Rock') {
+        roundWinner = "You lose! Rock beats Scissors"
+    } else if (playerSelection == 'scissors'.toUpperCase() && computerSelection == 'Paper') {
+        roundWinner = "You win! Scissors beats Paper"
+    } else if (playerSelection == 'scissors'.toUpperCase() && computerSelection == 'Scissors') {
+        roundWinner = "It`s a tie"
+     } 
+     return roundWinner;
 }
 
 
-const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));
+
+// playerSelection = prompt("Rock, Paper or Scrissors?").toUpperCase();
+
 
 function game() {
     let player = 0;
     let computer = 0;
+    let roundResult = '';
+   
 
     for (let i = 0; i < 5; i++) {
         playerSelection = prompt("Rock, Paper or Scrissors?").toUpperCase();
-        if (playRound(playerSelection, computerSelection).slice(0, 8) == 'You win!') {
+        computerSelection = getComputerChoice();
+        roundResult = playRound(playerSelection, computerSelection);
+
+        if (roundResult.slice(0, 8) === 'You win!') {
             player += 1;
-            
-        } else if (playRound(playerSelection, computerSelection).slice(0, 8) == 'You lose') {
+            console.log("You won this round!" + " -- Score: " + "Player: " + player + " - " + "Computer: " + computer)
+        } else if (roundResult.slice(0, 8) === 'You lose') {
             computer += 1;
-    
+            console.log("You lost this round!" + " -- Score: " + player + " - " + computer)
         } else {
-            playRound(playerSelection, computerSelection);
+            console.log("It`s a tie!")
+            i -= 1;
         }
         
     }
-    if (player > computer) {
-        return "You won the game!"
-    } else if (player < computer) {
-        return "You lost the game!"
-    } else {
-        return "It`s a tie."
-    }
     
+    if (player > computer) {
+        console.log("You won the game!")
+    } else {
+        console.log("You lost the game!")
+    } 
+
 }
 
 game();
