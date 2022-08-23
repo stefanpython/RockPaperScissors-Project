@@ -48,6 +48,7 @@ function game() {
    
 
     for (let i = 0; i < 5; i++) {
+        
         playerSelection = prompt("Rock, Paper or Scrissors?").toUpperCase();
         computerSelection = getComputerChoice();
         roundResult = playRound(playerSelection, computerSelection);
