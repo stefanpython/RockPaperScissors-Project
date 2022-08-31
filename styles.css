@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background-image: url("https://cutewallpaper.org/21/white-background-gif/Abstract-Grey-DNA-Molecular-Structure-Animated-Background-.gif");
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 100px;
+}
+
+.score {
+    font-family: 'VT323', monospace;
+    font-size: 70px;
+}
+
+button {
+    border-radius: 20px;
+}
+
+.weapon {
+    border-radius: 20px;
+}
