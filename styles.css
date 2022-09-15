@@ -8,6 +8,7 @@ body {
 h1 {
     font-family: 'VT323', monospace;
     font-size: 100px;
+    margin-top: -120px;
 }
 
 .score {
@@ -21,4 +22,16 @@ button {
 
 .weapon {
     border-radius: 20px;
+}
+
+.winner {
+    font-size: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 202px;
+    position: fixed;
+    margin-left: 830px;
 }

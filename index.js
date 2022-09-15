@@ -16,23 +16,23 @@ function playRound(playerSelection, computerSelection) {
     let roundWinner='';
 
     if (playerSelection == 'rock'.toUpperCase() && computerSelection == 'ROCK') {
-        return "It`s a tie"
+        return winner.textContent =  "It`s a tie"
     }else if (playerSelection == 'rock'.toUpperCase() && computerSelection == 'PAPER') {
-        return "You lose! Paper beats Rock"
+        return winner.textContent = "You lose! Paper beats Rock"
     } else if (playerSelection == 'rock'.toUpperCase() && computerSelection == 'SCISSORS'){
-        return "You win! Rock beats Paper"
+        return winner.textContent = "You win! Rock beats Paper"
     } else if (playerSelection == 'paper'.toUpperCase() && computerSelection == 'ROCK') {
-        return "You win! Paper beats Rock"
+        return winner.textContent = "You win! Paper beats Rock"
     } else if (playerSelection == 'paper'.toUpperCase() && computerSelection == 'PAPER') {
-        return "It`s a tie"
+        return winner.textContent = "It`s a tie"
     } else if (playerSelection == 'paper'.toUpperCase() && computerSelection == 'SCISSORS') {
-        return "You lose! Scissors beats Paper"
+        return winner.textContent = "You lose! Scissors beats Paper"
     } else if (playerSelection == 'scissors'.toUpperCase() && computerSelection == 'ROCK') {
-        return "You lose! Rock beats Scissors"
+        return winner.textContent = "You lose! Rock beats Scissors"
     } else if (playerSelection == 'scissors'.toUpperCase() && computerSelection == 'PAPER') {
-        return "You win! Scissors beats Paper"
+        return winner.textContent = "You win! Scissors beats Paper"
     } else if (playerSelection == 'scissors'.toUpperCase() && computerSelection == 'SCISSORS') {
-        return "It`s a tie"
+        return winner.textContent =  "It`s a tie"
      } 
     return roundWinner;
     
